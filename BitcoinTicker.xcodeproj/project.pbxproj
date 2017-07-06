@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55332A001FB7899553256AF0 /* Pods_BitcoinTicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D5C7613BCCA1ACE311C87F /* Pods_BitcoinTicker.framework */; };
 		63A618291C53C381007AF001 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A618281C53C381007AF001 /* AppDelegate.swift */; };
 		63A6182B1C53C381007AF001 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A6182A1C53C381007AF001 /* ViewController.swift */; };
 		63A6182E1C53C381007AF001 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63A6182C1C53C381007AF001 /* Main.storyboard */; };
@@ -22,6 +23,9 @@
 		63A6182F1C53C381007AF001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63A618321C53C381007AF001 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63A618341C53C381007AF001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AF674E866CA649F9F55AB0D /* Pods-BitcoinTicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinTicker.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinTicker/Pods-BitcoinTicker.release.xcconfig"; sourceTree = "<group>"; };
+		85CABB88D405DB388A1B715E /* Pods-BitcoinTicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinTicker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinTicker/Pods-BitcoinTicker.debug.xcconfig"; sourceTree = "<group>"; };
+		E4D5C7613BCCA1ACE311C87F /* Pods_BitcoinTicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitcoinTicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55332A001FB7899553256AF0 /* Pods_BitcoinTicker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08AFBD9BCDCE424F68C69DBF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				85CABB88D405DB388A1B715E /* Pods-BitcoinTicker.debug.xcconfig */,
+				7AF674E866CA649F9F55AB0D /* Pods-BitcoinTicker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		63A6181C1C53C381007AF001 = {
 			isa = PBXGroup;
 			children = (
 				63A618271C53C381007AF001 /* BitcoinTicker */,
 				63A618261C53C381007AF001 /* Products */,
+				08AFBD9BCDCE424F68C69DBF /* Pods */,
+				D23F582E6D7769D9E713FEDB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = BitcoinTicker;
 			sourceTree = "<group>";
 		};
+		D23F582E6D7769D9E713FEDB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4D5C7613BCCA1ACE311C87F /* Pods_BitcoinTicker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63A618371C53C381007AF001 /* Build configuration list for PBXNativeTarget "BitcoinTicker" */;
 			buildPhases = (
+				012F77E5E13A4AEA16F071C0 /* [CP] Check Pods Manifest.lock */,
 				63A618211C53C381007AF001 /* Sources */,
 				63A618221C53C381007AF001 /* Frameworks */,
 				63A618231C53C381007AF001 /* Resources */,
+				DC79264B6A13778013C9A38F /* [CP] Embed Pods Frameworks */,
+				C9AED8EA3BD8C9EE9B9DEBBF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		012F77E5E13A4AEA16F071C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C9AED8EA3BD8C9EE9B9DEBBF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitcoinTicker/Pods-BitcoinTicker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC79264B6A13778013C9A38F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitcoinTicker/Pods-BitcoinTicker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		63A618211C53C381007AF001 /* Sources */ = {
@@ -251,6 +326,7 @@
 		};
 		63A618381C53C381007AF001 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85CABB88D405DB388A1B715E /* Pods-BitcoinTicker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -266,6 +342,7 @@
 		};
 		63A618391C53C381007AF001 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AF674E866CA649F9F55AB0D /* Pods-BitcoinTicker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
